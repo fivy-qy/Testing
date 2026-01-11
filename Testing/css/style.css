@@ -34,7 +34,7 @@ background: #111;
 .navbar {
 max-width: 1200px;
 margin: auto;
-padding: 16px 32px;
+padding: 16px;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -218,4 +218,5 @@ gap: 0.5rem;
 }
 
 }
+
 
