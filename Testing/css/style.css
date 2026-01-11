@@ -195,7 +195,7 @@ text-align: center;
 footer {
 background: #111;
 color: #000;
-padding: 1rem;
+padding: 8px;
 text-align: center;
 }
 
@@ -218,6 +218,7 @@ gap: 0.5rem;
 }
 
 }
+
 
 
 
