@@ -1,6 +1,4 @@
-/* =====================
-GLOBAL STYLES
-===================== */
+
 * {
 margin: 0;
 padding: 0;
@@ -27,9 +25,7 @@ display: block;
 }
 
 
-/* =====================
-NAVBAR
-===================== */
+
 header {
 background: #111;
 }
@@ -71,9 +67,7 @@ font-weight: 500;
 color: #f4a261;
 }
 
-/* =====================
-HERO SECTION
-===================== */
+
 .hero {
 background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
 url('../images/banner/men.jpg') center/cover no-repeat;
@@ -98,9 +92,7 @@ margin-bottom: 2rem;
 }
 
 
-/* =====================
-BUTTONS
-===================== */
+
 .btn {
 background: #f4a261;
 color: #fff;
@@ -132,9 +124,7 @@ border-radius: 4px;
 cursor: pointer;
 }
 
-/* =====================
-CATEGORIES
-===================== */
+
 .categories {
 padding: 4rem 2rem;
 text-align: center;
@@ -164,9 +154,6 @@ margin: 1rem 0;
 }
 
 
-/* =====================
-FEATURED PRODUCTS
-===================== */
 .featured {
 padding: 4rem 2rem;
 background: #f1f1f1;
@@ -196,9 +183,7 @@ box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 margin: 0.5rem 0;
 }
 
-/* =====================
-ABOUT PREVIEW
-===================== */
+
 .about-preview {
 padding: 4rem 2rem;
 max-width: 800px;
@@ -207,9 +192,6 @@ text-align: center;
 }
 
 
-/* =====================
-FOOTER
-===================== */
 footer {
 background: #111;
 color: #fff;
@@ -224,9 +206,6 @@ color: #ccc;
 }
 
 
-/* =====================
-RESPONSIVE DESIGN
-===================== */
 @media (max-width: 768px) {
 .hero-content h1 {
 font-size: 2rem;
@@ -237,4 +216,5 @@ font-size: 2rem;
 flex-direction: column;
 gap: 0.5rem;
 }
+
 }
