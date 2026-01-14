@@ -217,12 +217,12 @@ html, body {
   flex-direction: column;
 }
 
-/* Semua content kecuali footer stretch ikut ruang */
+
 body > :not(footer) {
   flex: 1;
 }
 
-/* Footer styling awak sedia ada */
+
 footer {
   background: #B8A99C;
   color: #fff;
@@ -395,6 +395,7 @@ html {
   margin-top: 1rem; 
   margin-bottom: 2rem; 
 }
+
 
 
 
