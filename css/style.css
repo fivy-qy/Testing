@@ -251,7 +251,9 @@ gap: 0.5rem;
   color: #007bff;
   transform: scale(1.2);
 }
-
+/* =====================
+PRODUCT CARD
+===================== */
 .products {
   padding: 4rem 3rem;
 }
@@ -394,6 +396,7 @@ html {
 .btn:hover {
   background-color: #0056b3;
 }
+
 
 
 
