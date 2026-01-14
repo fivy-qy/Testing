@@ -82,30 +82,40 @@ function processPayment() {
     window.location.href = "order-summary.html";
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    const orderItems = document.getElementById("order-items");
-    const orderTotal = document.getElementById("order-total");
+// ================= ORDER SUMMARY =================
+function displayOrderSummary() {
+  const orderItems = document.getElementById("order-items");
+  const orderTotal = document.getElementById("order-total");
 
-    if (!orderItems) return;
+  if (!orderItems || !orderTotal) return;
 
-    const order = JSON.parse(localStorage.getItem("order")) || [];
-    let total = 0;
+  const order = JSON.parse(localStorage.getItem("order")) || [];
+  let total = 0;
+  orderItems.innerHTML = "";
 
-    orderItems.innerHTML = "";
+  order.forEach(item => {
+    const itemTotal = item.price * item.quantity; // multiply by quantity
+    total += itemTotal;
 
-    order.forEach(item => {
-        total += item.price;
+    orderItems.innerHTML += `
+      <div style="display:flex; justify-content:space-between; margin-bottom:1rem;">
+        <span>${item.name} (Size ${item.size}) x${item.quantity}</span>
+        <span>RM ${itemTotal.toFixed(2)}</span>
+      </div>
+    `;
+  });
 
-        orderItems.innerHTML += `
-            <div style="display:flex; justify-content:space-between; margin-bottom:1rem;">
-                <span>${item.name}</span>
-                <span>RM ${item.price}</span>
-            </div>
-        `;
-    });
+  orderTotal.textContent = `RM ${total.toFixed(2)}`;
+}
 
-    orderTotal.textContent = `RM ${total}`;
-});
+// ================= FINISH ORDER =================
+function finishOrder() {
+  localStorage.removeItem("order");
+  window.location.href = "index.html";
+}
+
+// Call on page load
+document.addEventListener("DOMContentLoaded", displayOrderSummary);
 
 function finishOrder() {
     localStorage.removeItem("order");
@@ -155,5 +165,6 @@ document.querySelectorAll(".product-card").forEach(card => {
     alert("Added to cart!");
   });
 });
+
 
 
