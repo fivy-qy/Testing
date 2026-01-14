@@ -239,9 +239,9 @@ gap: 0.5rem;
 }
 
 }
-
+ /* Social Media */
 .social i {
-  font-size: 36px; 
+  font-size: 70px; 
   transition: transform 0.3s, color 0.3s; /* Smooth effect */
 }
 
@@ -374,6 +374,7 @@ html {
   text-align: center;
   margin: 0 10px;
 }
+
 
 
 
