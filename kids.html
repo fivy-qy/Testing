@@ -5,84 +5,131 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kids Shoes | Jejak Shoes</title>
 
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-
-
-<!-- CSS -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 
-<!-- ================= NAVBAR ================= -->
-<header>
-<nav class="navbar">
-<div class="logo">Jejak Shoes</div>
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="men.html" >Men</a></li>
-<li><a href="women.html">Women</a></li>
-<li><a href="kids.html" class="active">Kids</a></li>
-<li><a href="cart.html">Cart 🛒</a></li>
-</ul>
-</nav>
+<header class="navbar">
+  <div class="logo">Jejak Shoes</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="men.html">Men</a></li>
+    <li><a href="women.html">Women</a></li>
+    <li><a href="kids.html" class="active">Kids</a></li>
+    <li><a href="cart.html">Cart 🛒</a></li>
+  </ul>
 </header>
 
 
-<!-- ================= PAGE HEADER ================= -->
-<section class="page-header" style="background:#704214; color:#fff; padding:3rem 2rem; text-align:center;">
+<section class="page-header" style="background:#111; color:#fff; padding:3rem 2rem; text-align:center;">
 <h1>Kids's Collection</h1>
 <p>Stylish, durable, and comfortable shoes for every step.</p>
 </section>
 
 
-<!-- ================= PRODUCT LIST ================= -->
-<section class="featured">
-<div class="product-container">
+<section class="products">
+  <div class="product-container">
 
 
-<div class="product-card">
-<img src="images/kids/gladiator.jpg" alt="Gladiator Kids Shoe">
-<h3>Gladiator</h3>
-<p>RM129.00</p>
-<button class="btn-small" onclick="addToCart('Gladiator', 129)">Add to Cart</button>
-</div>
+    <div class="product-card">
+      <img src="images/kids/shoe1.jpg" alt="Urban Walk">
+
+      <h3>Urban Walk</h3>
+      <p class="price">RM129</p>
 
 
-<div class="product-card">
-<img src="images/kids/strapSandalsKids.jpg" alt="Strap Sandals Kids Shoe">
-<h3>Strap Sandals</h3>
-<p>RM159.00</p>
-<button class="btn-small" onclick="addToCart('Strap Sandals', 159)">Add to Cart</button>
-</div>
+      <label>Shoe Size (UK)</label>
+      <select class="size-select">
+        <option value="">Select Size</option>
+        <option value="UK 1">UK 1</option>
+        <option value="UK 2">UK 2</option>
+        <option value="UK 3">UK 3</option>
+        <option value="UK 4">UK 4</option>
+      </select>
 
 
-<div class="product-card">
-<img src="images/kids/buckleSandal.jpg" alt="Buckle Sandal Kids Shoe">
-<h3>Buckle Sandal</h3>
-<p>RM179.00</p>
-<button class="btn-small" onclick="addToCart('Buckle Sandal', 179)">Add to Cart</button>
-</div>
+      <div class="qty-box">
+        <button class="qty-btn minus">−</button>
+        <input type="number" class="qty-input" value="1" min="1">
+        <button class="qty-btn plus">+</button>
+      </div>
+
+      <button class="add-to-cart"
+        data-name="Urban Walk"
+        data-price="129">
+        Add to Cart
+      </button>
+    </div>
 
 
-</div>
+    <div class="product-card">
+      <img src="images/kids/shoe2.jpg" alt="Street Runner">
+
+      <h3>Street Runner</h3>
+      <p class="price">RM159</p>
+
+      <label>Shoe Size (UK)</label>
+      <select class="size-select">
+        <option value="">Select Size</option>
+        <option value="UK 2">UK 2</option>
+        <option value="UK 3">UK 3</option>
+        <option value="UK 4">UK 4</option>
+        <option value="UK 5">UK 5</option>
+      </select>
+
+      <div class="qty-box">
+        <button class="qty-btn minus">−</button>
+        <input type="number" class="qty-input" value="1" min="1">
+        <button class="qty-btn plus">+</button>
+      </div>
+
+      <button class="add-to-cart"
+        data-name="Street Runner"
+        data-price="159">
+        Add to Cart
+      </button>
+    </div>
+
+
+    <div class="product-card">
+      <img src="images/kids/shoe3.jpg" alt="Classic Formal">
+
+      <h3>Classic Formal</h3>
+      <p class="price">RM179</p>
+
+      <label>Shoe Size (UK)</label>
+      <select class="size-select">
+        <option value="">Select Size</option>
+        <option value="UK 3">UK 3</option>
+        <option value="UK 4">UK 4</option>
+        <option value="UK 5">UK 5</option>
+        <option value="UK 6">UK 6</option>
+      </select>
+
+      <div class="qty-box">
+        <button class="qty-btn minus">−</button>
+        <input type="number" class="qty-input" value="1" min="1">
+        <button class="qty-btn plus">+</button>
+      </div>
+
+      <button class="add-to-cart"
+        data-name="Classic Formal"
+        data-price="179">
+        Add to Cart
+      </button>
+    </div>
+
+  </div>
 </section>
 
-
-<!-- ================= FOOTER ================= -->
 <footer>
-<div class="footer-content">
-<p>&copy; 2026 Jejak Shoes. All Rights Reserved.</p>
-</div>
+  <p>&copy; 2026 Jejak Shoes. All Rights Reserved.</p>
 </footer>
 
-
-<!-- ================= JAVASCRIPT ================= -->
 <script src="js/script.js"></script>
 </body>
-
 </html>
 
 
