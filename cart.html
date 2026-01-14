@@ -2,62 +2,36 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shopping Cart | Jejak Shoes</title>
-
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-
-
-<!-- CSS -->
+<title>Cart | Jejak Shoes</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<h1 style="text-align:center; margin-top:2rem;">Your Cart 🛒</h1>
 
-<!-- ================= NAVBAR ================= -->
-<header>
-<nav class="navbar">
-<div class="logo">Jejak Shoes</div>
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="men.html">Men</a></li>
-<li><a href="women.html">Women</a></li>
-<li><a href="kids.html">Kids</a></li>
-<li><a href="cart.html" class="active">Cart 🛒</a></li>
-</ul>
-</nav>
-</header>
+<table class="cart-table">
+<thead>
+<tr>
+  <th>Product</th>
+  <th>Size</th>
+  <th>Price</th>
+  <th>Qty</th>
+  <th>Total</th>
+  <th>Remove</th>
+</tr>
+</thead>
+<tbody id="cart-items"></tbody>
+</table>
 
+<h2 id="cart-total" style="text-align:center;"></h2>
 
-<!-- ================= CART SECTION ================= -->
-<section class="cart-section" style="padding:4rem 2rem; max-width:900px; margin:auto;">
-<h2 style="text-align:center; margin-bottom:2rem;">Your Shopping Cart</h2>
-
-
-<div id="cart-items"></div>
-
-
-<div style="margin-top:2rem; text-align:right;">
-<h3>Total: <span id="cart-total">RM 0</span></h3>
-<br>
-<button class="btn-small" onclick="clearCart()">Clear Cart</button>
-<br><br>
-<a href="checkout.html" class="btn">Proceed to Checkout</a>
-</div>
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-<footer>
-<div class="footer-content">
-<p>&copy; 2026 Jejak Shoes. All Rights Reserved.</p>
-</div>
-</footer>
+<script src="js/cart.js"></script>
+</body>
+</html>
 
 
 <!-- ================= JAVASCRIPT ================= -->
 <script src="js/script.js"></script>
 </body>
+
 </html>
