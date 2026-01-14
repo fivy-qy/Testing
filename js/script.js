@@ -26,37 +26,32 @@ alert(productName + " has been added to your cart!");
 
 // Function to display cart items (for cart.html)
 function displayCart() {
-const cartItems = document.getElementById("cart-items");
-const cartTotal = document.getElementById("cart-total");
+  const cartItems = document.getElementById("cart-items");
+  const cartTotal = document.getElementById("cart-total");
 
+  if (!cartItems || !cartTotal) return;
 
-if (!cartItems || !cartTotal) return;
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cartItems.innerHTML = "";
+  let total = 0;
 
+  cart.forEach((item, index) => {
+    const itemTotal = item.price * item.quantity; // multiply by quantity
+    const row = document.createElement("tr"); // Use table row if cart.html uses <table>
+    row.innerHTML = `
+      <td>${item.name}</td>
+      <td>${item.size}</td>
+      <td>RM ${item.price.toFixed(2)}</td>
+      <td>${item.quantity}</td>
+      <td>RM ${itemTotal.toFixed(2)}</td>
+      <td><button onclick="removeItem(${index})">Remove</button></td>
+    `;
+    cartItems.appendChild(row);
+    total += itemTotal;
+  });
 
-cartItems.innerHTML = "";
-let total = 0;
-
-
-cart.forEach((item, index) => {
-const row = document.createElement("div");
-row.classList.add("cart-row");
-
-
-row.innerHTML = `
-<p>${item.name}</p>
-<p>RM ${item.price}</p>
-<button onclick="removeItem(${index})">Remove</button>
-`;
-
-
-cartItems.appendChild(row);
-total += item.price;
-});
-
-
-cartTotal.textContent = "RM " + total;
+  cartTotal.textContent = "Total: RM " + total.toFixed(2);
 }
-
 
 // Remove item from cart
 function removeItem(index) {
@@ -159,3 +154,4 @@ document.querySelectorAll(".product-card").forEach(card => {
     alert("Added to cart!");
   });
 });
+
