@@ -114,4 +114,48 @@ document.addEventListener("DOMContentLoaded", function () {
 function finishOrder() {
     localStorage.removeItem("order");
     window.location.href = "index.html";
+
 }
+
+document.querySelectorAll(".product-card").forEach(card => {
+  const plus = card.querySelector(".plus");
+  const minus = card.querySelector(".minus");
+  const qtyInput = card.querySelector(".qty-input");
+  const addBtn = card.querySelector(".add-to-cart");
+  const sizeSelect = card.querySelector(".size-select");
+
+  plus.addEventListener("click", () => {
+    qtyInput.value++;
+  });
+
+  minus.addEventListener("click", () => {
+    if (qtyInput.value > 1) qtyInput.value--;
+  });
+
+  addBtn.addEventListener("click", () => {
+    const name = addBtn.dataset.name;
+    const price = parseInt(addBtn.dataset.price);
+    const size = sizeSelect.value;
+    const quantity = parseInt(qtyInput.value);
+
+    if (size === "") {
+      alert("Please select a shoe size!");
+      return;
+    }
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existing = cart.find(
+      item => item.name === name && item.size === size
+    );
+
+    if (existing) {
+      existing.quantity += quantity;
+    } else {
+      cart.push({ name, price, size, quantity });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert("Added to cart!");
+  });
+});
