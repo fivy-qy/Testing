@@ -240,8 +240,15 @@ gap: 0.5rem;
 
 }
 
-.social:hover {
+.social i {
+  font-size: 36px; 
+  transition: transform 0.3s, color 0.3s; /* Smooth effect */
+}
+
+/* Hover effect */
+.social:hover i {
   color: #007bff;
+  transform: scale(1.2);
 }
 
 .products {
@@ -367,6 +374,7 @@ html {
   text-align: center;
   margin: 0 10px;
 }
+
 
 
 
